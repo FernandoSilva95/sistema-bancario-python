@@ -12,9 +12,9 @@ def menu():
     [nu]\tNovo usuário
     [q]\tSair
     => """
-    return input(textwrap.dedent(menu))  #dedent respeita o alinhamento definido
+    return input(textwrap.dedent(menu))  #dedent: respeita o alinhamento definido
     
-def depositar(saldo, valor, extrato, /): # a "/"" significa passar argumentos por posição tudo o que vem antes dele
+def depositar(saldo, valor, extrato, /): # a "/"" significa passar argumentos "por posição" tudo o que vem antes dele. ex: resultado = exemplo(1, 2, 3). print(resultado)  # Saída: 6
     if valor > 0:
         saldo += valor
         extrato += f"Depósito:\tR$ {valor:.2f}\n"
@@ -24,7 +24,7 @@ def depositar(saldo, valor, extrato, /): # a "/"" significa passar argumentos po
     
     return saldo, extrato
     
-def sacar(*, saldo, valor, extrato, limite, numero_saques, limite_saques): # o "*" significa passar argumentos nomeado tudo o que vem depois dele
+def sacar(*, saldo, valor, extrato, limite, numero_saques, limite_saques): # o "*" significa passar argumentos "por nome" tudo o que vem depois dele. ex: resultado = exemplo2(a=1, b=2, c=3). print(resultado)  # Saída: 6
     excedeu_saldo = valor > saldo
     excedeu_limite = valor > limite
     excedeu_saques = numero_saques >= limite_saques
@@ -68,7 +68,7 @@ def criar_usuario(usuarios):
     data_nascimento = input("Informe a data de nascimento (dd-mm-aaaa): ")
     endereco = input("Informe o endereço (logradouro, nro - bairro - cidade/sigla Estado): ")
     
-    usuarios.append({"nome":nome, "data_nascimento": data_nascimento, "cpf": cpf, "endereco":endereco})
+    usuarios.append({"nome":nome, "data_nascimento": data_nascimento, "cpf": cpf, "endereco":endereco})  #append: adiciona um novo item ao final da lista "usuarios"
     
     print("\n=== Usuário criado com sucesso! ===")
     
