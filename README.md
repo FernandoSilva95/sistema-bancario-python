@@ -18,6 +18,6 @@ Sistema em Python, que permite ao usuário realizar operações básicas como de
 **Escolher uma das opções do MENU:** Permitirá seguir com a opção desejada de 1 a 3, além de cancelar a operação, digitando a opção 4.
 **Realizar Operações:** Dependendo da opção selecionada, siga as instruções na tela para realizar cadastrar novos usuários, depósitos, saques ou consultar o extrato.
 
-## Requesitos
+## Requisitos
 
 Python 3
